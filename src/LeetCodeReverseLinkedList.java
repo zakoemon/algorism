@@ -30,6 +30,24 @@ class LeetCodeReverseLinkedList {
         return first;
     }
 
+    public static ListNode otherSolution(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        // p is gonna be always the last node
+        ListNode p = otherSolution(head.next);
+        /*
+        1 -> 2 -> 3 -> 4
+        when head is 3
+        4 -> 3 -> null *2 still has reference to 3
+         */
+        head.next.next = head;
+        head.next = null;
+        // it's always 4 if it's like the ex
+        return p;
+    }
+
     public static class ListNode {
         int val;
         ListNode next;
