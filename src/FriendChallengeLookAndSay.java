@@ -1,16 +1,16 @@
 public class FriendChallengeLookAndSay {
 
     public static void main(String args[]) {
-
-        System.out.println(solution(4));
+        System.out.println(solution(8));
     }
 
     public static String solution(int n) {
-        return rec(n, 2, "1");
+        String start = "1";
+        if (n == 1) return start;
+        return rec(n, 2, start);
     }
 
     private static String rec(int n, int index, String look) {
-        if (n == 1) return look;
         if (n == index) {
             return lookAndSay(look);
         }
