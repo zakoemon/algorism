@@ -12,6 +12,6 @@ class Solution:
         cur1 = headA
         cur2 = headB
         while cur1 is not cur2:
-            cur1 = headB if cur2 is None else cur1.next
-            cur2 = headB if cur1 is None else cur2.next
+            cur1 = headB if cur1 is None else cur1.next
+            cur2 = headA if cur2 is None else cur2.next
         return cur1
