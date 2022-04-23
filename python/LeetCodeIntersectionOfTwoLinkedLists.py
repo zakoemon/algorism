@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/intersection-of-two-linked-lists/
+# smart solution https://leetcode.com/problems/intersection-of-two-linked-lists/discuss/49785/Java-solution-without-knowing-the-difference-in-len!
 
 class ListNode:
     def __init__(self, x):
